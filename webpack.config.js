@@ -1,6 +1,6 @@
 module.exports = {
     cache: true,
-    entry: './static/src/app.js',
+    entry: './src/app.js',
     output: {
         filename: './static/build/main.js'
     },

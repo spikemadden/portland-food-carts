@@ -1,4 +1,4 @@
-import { addPopupToMap } from './../app';
+import { addPopupToMap } from '../app';
 
 let React = require('react');
 let Vendor = require('./Vendor');
@@ -22,7 +22,7 @@ class Sidebar extends React.Component {
       popup.remove();
     });
 
-    fetch("https://c76bms2qk5.execute-api.us-west-2.amazonaws.com/prod/search?" + this.state.query).then((response) => {
+    fetch("https://c76bms2qk5.execute-api.us-west-2.amazonaws.com/prod/search?q=" + this.state.query).then((response) => {
       return response.json();
     }).then(function(res) {
           this.setState({
