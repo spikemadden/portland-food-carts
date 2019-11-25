@@ -166,8 +166,8 @@ class Sidebar extends React.Component {
 
     return (
       <div id="search-and-results">
-        <div id="search-area">
-          <form onSubmit={this.handleSearch}>
+        <div>
+          <form onSubmit={this.handleSearch} id="search-area">
             <input type="search" value={query} onChange={this.onChange}
               placeholder="What do you want to eat?" spellCheck="false" autoFocus="autofocus"/>
             <button> <img src='assets/search.svg'></img></button>

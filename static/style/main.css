@@ -1,11 +1,12 @@
 * {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
 }
 
 body {
   margin: 0;
-  font-family: 'Titillium Web', sans-serif;
+  font-family: 'Lato', sans-serif;
   overflow-y: hidden;
   color: #aaa;
 }
@@ -21,6 +22,11 @@ a {
 
 input {
   border-radius: 0;
+  font-size: 100%;
+}
+
+input::placeholder {
+  font-size: 12px;
 }
 
 .checked {
@@ -28,12 +34,10 @@ input {
 }
 
 .header {
-  background-color: #d3cace;
+  background-color: #B62A3D;
   color: white;
-  height: 2em;
-  font-family: 'Titillium Web', sans-serif;
-  font-size: 1.5em;
-  text-transform: uppercase;
+  font-family: 'Pacifico', cursive;
+  font-size: 2em;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -57,11 +61,11 @@ input {
 #search-area {
   display: flex;
   flex-direction: row;
-  border: 5px solid #cad2d3;
+  justify-content: center;
+  border: 10px solid #cad2d3;
 }
 
-#search-area input,
-#search-area button {
+#search-area input {
   -webkit-appearance: none;
   -moz-appearance: none;
   box-sizing: border-box;
@@ -70,26 +74,23 @@ input {
   border: none;
   outline: none;
   background-color: #f5f5f5;
+  width: calc(100% - 44px);
+}
+
+#search-area button {
+  display: block;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border: none;
+  outline: none;
+  background-color: #EDCB64;
+  width: 44px;
+  height: 44px;
+  cursor: pointer;
 }
 
 #search-area form {
   width: 100%;
-}
-
-#search-area input {
-  width: 90%;
-}
-
-#search-area button {
-  width: 10%;
-  font-weight: 600;
-  text-transform: uppercase;
-  cursor: pointer;
-  height: 100%;
-}
-
-#search-area button img {
-  height: 10px;
 }
 
 #results-area {
@@ -118,8 +119,8 @@ input {
 
 #results-area ul li {
   border-bottom: 1px solid #444;
-  padding: 5px 10px;
-  margin-bottom: 10px;
+  padding: 8px 10px;
+  margin-bottom: 2px;
   cursor: pointer;
 }
 
@@ -129,17 +130,19 @@ input {
 }
 
 #results-area ul li p.cart-name {
-  color: #072844;
+  color: #3A3A3A;
   text-transform: uppercase;
-  margin: 0;
+  font-weight: bold;
   font-size: 16px;
-  margin-bottom: 5px;
+  margin: 0 0 5px;
+  font-family: 'Titillium Web', sans-serif;
 }
 
 #results-area ul li div.row {
   display: flex;
   flex-direction: row;
   align-items: center;
+  padding: 2px 0;
 }
 
 #results-area ul li div.row div.icons {
@@ -153,16 +156,17 @@ img {
 #results-area ul li div.row div.content {
   order: 2;
   margin-left: 10px;
-  color: #282828;
+  color: #3A3A3A;
+
 }
 
 #results-area ul li div.row a {
-  color: #282828;
+  color: #3A3A3A;
 }
 
 #content {
   flex: 1;
-  border-top: 5px solid #cad2d3;
+  border-top: 10px solid #cad2d3;
 }
 
 #map {
@@ -228,5 +232,8 @@ input.mobile-search {
   }
   #sidebar #results-area {
     display: none;
+  }
+  #search-area button {
+    background-color: #f5f5f5;
   }
 }
