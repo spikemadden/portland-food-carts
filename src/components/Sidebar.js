@@ -22,7 +22,7 @@ class Sidebar extends React.Component {
       popup.remove();
     });
 
-    fetch("https://c76bms2qk5.execute-api.us-west-2.amazonaws.com/prod/search?q=" + this.state.query).then((response) => {
+    fetch("https://d3hu010uh2ww3y.cloudfront.net/search?q=" + this.state.query).then((response) => {
       return response.json();
     }).then(function(res) {
           this.setState({
