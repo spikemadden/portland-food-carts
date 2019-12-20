@@ -12,7 +12,8 @@ module.exports = {
             loader: 'babel-loader',
             query: {
                 presets: ['env', 'react', 'stage-2']
-            }
+            },
+            exclude: /mapbox-gl/
         },
         ]
     }
